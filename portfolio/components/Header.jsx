@@ -23,6 +23,8 @@ export default function Header () {
         {/* socials icons */}
         <SocialIcon
           url="https://github.com/chhuongle"
+          fgColor="gray"
+          bgColor="transparent"
         />
         <SocialIcon
           url="https://linkedin.com/in/chhuongle"
