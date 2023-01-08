@@ -30,8 +30,8 @@ export default function About () {
         />
         <div className="space-y-10 px-0 md:px-10">
           <h4 className="text-4xl font-semibold">My background</h4>
-          <p className="text-base">
-            My name is Chhuong (pronounced "CHONG"). I am a former Applications Engineer that came from an industry leading automation comapany. I have transitioned my carrer path towards software development and could not be happier with my choice. I have several years of experience as an application developer with my previous company and have made my own full stack applications to grow with the always expanding industry. In my hours away from the computer, I am an avid photographer and cat father to a beautiful ragdoll named Loki.
+          <p className="text-lg">
+            My name is Chhuong (pronounced "CHONG"). I am a former Applications Engineer that came from an industry leading automation comapany. I have transitioned my carrer path towards software development and could not be happier with my choice. I have several years of experience as an application developer with my previous company and have made my own full stack applications to grow with the always expanding industry. In my hours away from the computer, I am an avid landscape photographer and cat father to a beautiful ragdoll named Loki.
           </p>
         </div>
       </motion.div>

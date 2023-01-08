@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google';
-import Header from '../components/Header.jsx'
-import Hero from '../components/Hero.jsx'
-import About from '../components/About.jsx'
-
-const inter = Inter({ subsets: ['latin'] })
+import Header from '../components/Header.jsx';
+import Hero from '../components/Hero.jsx';
+import About from '../components/About.jsx';
+import WorkExperience from '../components/WorkExperience.jsx';
 
 export default function Home() {
   return (
@@ -21,18 +20,15 @@ export default function Home() {
         <title>Chhuong's Portfolio</title>
       </Head>
       <Header />
-
-      {/* Hero */}
       <section id="hero" className="snap-center">
         <Hero />
       </section>
-
-      {/* About */}
       <section id="about" className="snap-center">
         <About />
       </section>
-
-      {/* Experience */}
+      <section id="experience" className="snap-center">
+        <WorkExperience />
+      </section>
 
       {/* Skills */}
 

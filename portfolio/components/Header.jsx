@@ -20,7 +20,6 @@ export default function Header () {
         duration: 0.5,
       }}
        className="flex flex-row items-center">
-        {/* socials icons */}
         <SocialIcon
           url="https://github.com/chhuongle"
           fgColor="gray"
