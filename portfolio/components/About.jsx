@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { SocialIcon } from 'react-social-icons';
+
 
 export default function About () {
   return (
@@ -31,7 +33,7 @@ export default function About () {
         <div className="space-y-10 px-0 md:px-10">
           <h4 className="text-4xl font-semibold">My background</h4>
           <p className="text-lg">
-            My name is Chhuong (pronounced "CHONG"). I am a former Applications Engineer that came from an industry leading automation comapany. I have transitioned my carrer path towards software development and could not be happier with my choice. I have several years of experience as an application developer with my previous company and have made my own full stack applications to grow with the always expanding industry. In my hours away from the computer, I am an avid landscape photographer and cat father to a beautiful ragdoll named Loki.
+            My name is Chhuong (pronounced "CHONG"). I am a gradudate from the University of California, Riverside (B.S. in Chemical and Environmental Engineering) and former Applications Engineer that came from an industry leading automation comapany. I have transitioned my carrer path towards software development and could not be happier with my choice. I have several years of experience as an application developer with my previous company and have made my own full stack applications to grow with the always expanding industry. In my hours away from the computer, I am an avid landscape photographer, a cat father to a beautiful ragdoll named Loki, and a keyboard building enthusiast.
           </p>
         </div>
       </motion.div>
