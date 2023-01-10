@@ -6,6 +6,7 @@ import About from '../components/About.jsx';
 import WorkExperience from '../components/WorkExperience.jsx';
 import Skills from '../components/Skills.jsx';
 import Projects from '../components/Projects.jsx';
+import ContactMe from '../components/ContactMe.jsx';
 
 export default function Home() {
   return (
@@ -43,6 +44,9 @@ export default function Home() {
       </section>
 
       {/* Contact Me */}
+      <section id="contact" className="snap-center">
+        <ContactMe />
+      </section>
     </div>
   )
 }

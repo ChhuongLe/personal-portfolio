@@ -21,7 +21,7 @@ export default function Projects() {
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20" >
         {projects.map((projects, i)=>{
           return (
-            <div className="w-screen flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44">
+            <div className="w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44">
               <motion.div
                 initial={{
                   y:-300,
@@ -37,7 +37,7 @@ export default function Projects() {
                 <Image src={MediumClone}  />
               </motion.div>
             <div>
-              <h4>Project {i+1}: Medium Clone</h4>
+              <h4 className="text-2xl">Project {i+1}: Medium Clone</h4>
             </div>
           </div>
           )
