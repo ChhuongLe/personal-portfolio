@@ -5,6 +5,7 @@ import Hero from '../components/Hero.jsx';
 import About from '../components/About.jsx';
 import WorkExperience from '../components/WorkExperience.jsx';
 import Skills from '../components/Skills.jsx';
+import Projects from '../components/Projects.jsx';
 
 export default function Home() {
   return (
@@ -37,6 +38,9 @@ export default function Home() {
       </section>
 
       {/* Projects */}
+      <section id="projects" className="snap-center">
+        <Projects />
+      </section>
 
       {/* Contact Me */}
     </div>
