@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ExperienceCard from './ExperienceCard';
+import { sanityClient } from "../sanity";
 
-export default function WorkExperience(){
+export default function WorkExperience({experience}){
+  console.log(experience)
   return (
     <motion.div
     initial={{opacity: 0}}
@@ -17,4 +19,16 @@ export default function WorkExperience(){
       </div>
     </motion.div>
   )
+}
+
+export const getStaticProps = async() => {
+  const res = await sanityClient.fetch('/api/getExperience');
+
+  const experience = res.json();
+
+  return {
+    props: {
+      experience,
+    }
+  }
 }

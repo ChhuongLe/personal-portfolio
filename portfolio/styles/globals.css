@@ -10,5 +10,9 @@
   .contactInput {
     @apply outline-none bg-slate-400/10 rounded-sm border-b border-[#242424] px-6 py-4 text-gray-500 placeholder-gray-500 transition-all focus:border-[#DCD7C9]/40 focus:text-[#DCD7C9]/40 hover:border-[#DCD7C9]/40
   }
+
+  .iconStyle {
+    @apply rounded-full border border-gray-500 object-cover w-24 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out
+  }
 }
 
