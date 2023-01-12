@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,7 +12,7 @@ import Projects from '../components/Projects.jsx';
 import ContactMe from '../components/ContactMe.jsx';
 import {ChevronDoubleUpIcon} from '@heroicons/react/24/solid';
 
-export default function Home() {
+export default function Home({experience}) {
   return (
     <div
       className="bg-[#2C3639] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#DCD7C9]/80"
@@ -31,7 +32,7 @@ export default function Home() {
       </section>
 
       <section id="experience" className="snap-center">
-        <WorkExperience />
+        <WorkExperience experience={experience}/>
       </section>
 
       <section id="skills" className="snap-center">
@@ -55,4 +56,15 @@ export default function Home() {
         </Link>
     </div>
   )
+}
+
+export const getStaticProps = async() => {
+  const res = await fetch('http://localhost:3000/api/getExperience');
+  const experience = await res.json();
+
+  return{
+    props: {
+      experience,
+    }
+  };
 }

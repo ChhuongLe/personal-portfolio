@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 import ExperienceCard from './ExperienceCard';
 import { sanityClient } from "../sanity";
 
-export default function WorkExperience({experience}){
-  console.log(experience)
+export default function WorkExperience({ experience }){
+  let data = experience;
+  console.log(data[0]);
   return (
     <motion.div
     initial={{opacity: 0}}
@@ -13,22 +14,22 @@ export default function WorkExperience({experience}){
     className="h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center">
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Work Experience</h3>
       <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-thin scrollbar-track-gray-400 scrollbar-thumb-[#DCD7C9]">
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
+        {data.map((el)=>{
+          return(
+            <ExperienceCard
+              title={el.title}
+              companyName={el.companyName}
+              image={el.companyImage}
+              dateStarted={el.dateStarted}
+              dateEnded={el.dateEnded}
+              isCurrentlyWorkingHere={el.isCurrentlyWorkingHere}
+              points={el.points}
+              technologies={el.technologies}
+               />
+          )
+        })}
       </div>
     </motion.div>
   )
 }
 
-export const getStaticProps = async() => {
-  const res = await sanityClient.fetch('/api/getExperience');
-
-  const experience = res.json();
-
-  return {
-    props: {
-      experience,
-    }
-  }
-}

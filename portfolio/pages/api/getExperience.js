@@ -4,6 +4,7 @@ import { sanityClient } from "../../sanity";
 const query = groq `
   *[_type == "experience"] {
     title,
+    companyName,
     companyImage,
     dateStarted,
     dateEnded,
