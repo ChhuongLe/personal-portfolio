@@ -11,8 +11,13 @@ import Skills from '../components/Skills.jsx';
 import Projects from '../components/Projects.jsx';
 import ContactMe from '../components/ContactMe.jsx';
 import {ChevronDoubleUpIcon} from '@heroicons/react/24/solid';
+import {
+  fetchExperience,
+  fetchProjects,
+  fetchSkills,
+  fetchSocials } from '../helpers.js';
 
-export default function Home({experience}) {
+export default function Home({experience, projects, skills, socials}) {
   return (
     <div
       className="bg-[#2C3639] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#DCD7C9]/80"
@@ -36,11 +41,11 @@ export default function Home({experience}) {
       </section>
 
       <section id="skills" className="snap-center">
-        <Skills />
+        <Skills skills={skills} />
       </section>
 
       <section id="projects" className="snap-center">
-        <Projects />
+        <Projects projects={projects}/>
       </section>
 
       <section id="contact" className="snap-center">
@@ -59,12 +64,16 @@ export default function Home({experience}) {
 }
 
 export const getStaticProps = async() => {
-  const res = await fetch('http://localhost:3000/api/getExperience');
-  const experience = await res.json();
-
+  const experience = await fetchExperience();
+  const projects = await fetchProjects();
+  const skills = await fetchSkills();
+  const socials = await fetchSocials();
   return{
     props: {
       experience,
+      projects,
+      skills,
+      socials,
     }
   };
 }

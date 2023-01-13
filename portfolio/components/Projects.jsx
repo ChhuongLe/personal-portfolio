@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import MediumClone from '../public/Medium.png';
+import { urlFor } from '../sanity';
 
-export default function Projects() {
-  const projects = [1,2,3,4,5]
+export default function Projects({ projects }) {
   return (
     <motion.div
       initial={{
@@ -19,9 +19,10 @@ export default function Projects() {
       className="flex relative h-screen overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Projects</h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400 scrollbar-thumb-[#DCD7C9]" >
-        {projects.map((projects, i)=>{
+        {projects.map((project, i)=>{
+          console.log(project.technologies);
           return (
-            <div className="w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44">
+            <div key={i} className="w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44">
               <motion.div
                 initial={{
                   y:-300,
@@ -34,10 +35,11 @@ export default function Projects() {
                 }}
                 viewport={{ once: true }}
               >
-                <Image src={MediumClone}  />
+                <Image src={project.image} width={700} height={700}  />
               </motion.div>
             <div>
-              <h4 className="text-2xl">Project {i+1}: Medium Clone</h4>
+              <h4 className="text-2xl">Project {i+1}: {project.title}</h4>
+              <p>{project.summary}</p>
             </div>
           </div>
           )

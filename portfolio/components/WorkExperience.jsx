@@ -5,7 +5,6 @@ import { sanityClient } from "../sanity";
 
 export default function WorkExperience({ experience }){
   let data = experience;
-  console.log(data[0]);
   return (
     <motion.div
     initial={{opacity: 0}}
@@ -17,6 +16,7 @@ export default function WorkExperience({ experience }){
         {data.map((el)=>{
           return(
             <ExperienceCard
+              key={el._id}
               title={el.title}
               companyName={el.companyName}
               image={el.companyImage}
@@ -25,7 +25,7 @@ export default function WorkExperience({ experience }){
               isCurrentlyWorkingHere={el.isCurrentlyWorkingHere}
               points={el.points}
               technologies={el.technologies}
-               />
+              />
           )
         })}
       </div>

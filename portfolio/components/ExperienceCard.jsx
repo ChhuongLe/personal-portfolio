@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { IconContext } from 'react-icons';
 import { SiCplusplus } from 'react-icons/si'
 
-export default function ExperienceCard({title, companyName, image, dateStarted, dateEnded, isCurrentlyWorkingHere, points}) {
-
+export default function ExperienceCard({title, companyName, image, dateStarted, dateEnded, isCurrentlyWorkingHere, points, technologies}) {
+  console.log(technologies)
   return (
     <article className=" hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200">
       <motion.div
@@ -19,7 +19,7 @@ export default function ExperienceCard({title, companyName, image, dateStarted, 
           y: 0
         }}
         viewport={{once: true}}
-        className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 overflow-hidden"
+        className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[400px] md:w-[500px] xl:w-[600px] snap-center bg-[#292929] p-10 overflow-hidden"
       >
         <Image src={image}
         width={150}
@@ -30,7 +30,6 @@ export default function ExperienceCard({title, companyName, image, dateStarted, 
           <p className="font-bold text-2xl mt-1">{companyName}</p>
           <div className="flex space-x-2 my-2">
             <div className=" rounded-full">
-              <SiCplusplus size="2em"/>
             </div>
           </div>
           <p className="uppercase py-5 text-gray-300">{dateStarted} - {dateEnded}</p>
