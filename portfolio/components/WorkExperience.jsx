@@ -14,7 +14,7 @@ export default function WorkExperience({ experience }){
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Work Experience</h3>
       <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-thin scrollbar-track-gray-400 scrollbar-thumb-[#DCD7C9]">
         {data.map((el)=>{
-          return(
+          return (
             <ExperienceCard
               key={el._id}
               title={el.title}
@@ -26,7 +26,7 @@ export default function WorkExperience({ experience }){
               points={el.points}
               technologies={el.technologies}
               />
-          )
+            )
         })}
       </div>
     </motion.div>

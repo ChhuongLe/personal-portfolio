@@ -3,9 +3,19 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { IconContext } from 'react-icons';
 import { SiCplusplus } from 'react-icons/si'
+import { urlFor } from '../sanity';
 
 export default function ExperienceCard({title, companyName, image, dateStarted, dateEnded, isCurrentlyWorkingHere, points, technologies}) {
-  console.log(technologies)
+  let tech;
+
+  if(technologies !== null || technologies !== undefined){
+    tech = technologies.map((el)=>{
+      return (
+        <div className="py-2 px-2"><Image src={urlFor(el.image).url()} width={30} height={30}/></div>
+      )
+
+    })
+  }
   return (
     <article className=" hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200">
       <motion.div
@@ -28,9 +38,8 @@ export default function ExperienceCard({title, companyName, image, dateStarted, 
         <div className="px-0 md:px-10">
           <h4 className="text-4xl font-light">{title}</h4>
           <p className="font-bold text-2xl mt-1">{companyName}</p>
+          {tech}
           <div className="flex space-x-2 my-2">
-            <div className=" rounded-full">
-            </div>
           </div>
           <p className="uppercase py-5 text-gray-300">{dateStarted} - {dateEnded}</p>
           <ul className="list-disc space-y-4 ml-5 text-lg">
