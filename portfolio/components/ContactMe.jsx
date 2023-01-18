@@ -14,7 +14,7 @@ export default function ContactMe() {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Contact Me</h3>
       <div className="flex flex-col space-y-10">
         <h4 className="text-4xl semi-bold text-center">
-          Like what you see?{" "}<span className="decoration-[#A27B5C]/50 underline">Let's Talk.</span>
+          Like what you see?{" "}<span className="decoration-[#A27B5C]/50 underline">Let&rsquo;s Talk.</span>
         </h4>
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">

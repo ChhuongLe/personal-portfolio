@@ -9,9 +9,9 @@ export default function ExperienceCard({title, companyName, image, dateStarted, 
   let tech;
 
   if(technologies !== null || technologies !== undefined){
-    tech = technologies.map((el)=>{
+    tech = technologies.map((el, i)=>{
       return (
-        <div className="py-2 px-2"><Image src={urlFor(el.image).url()} width={30} height={30}/></div>
+        <div key={i} className="py-2 px-2"><Image src={urlFor(el.image).url()} alt='' width={30} height={30}/></div>
       )
 
     })
@@ -29,19 +29,20 @@ export default function ExperienceCard({title, companyName, image, dateStarted, 
           y: 0
         }}
         viewport={{once: true}}
-        className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[400px] md:w-[500px] xl:w-[600px] snap-center bg-[#292929] p-10 overflow-hidden"
+        className="mt-20 flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[300px] h-[520px] md:w-[500px] xl:w-[600px] snap-center bg-[#292929] p-10 overflow-scroll"
       >
         <Image src={image}
+        alt=''
         width={150}
         height={150}
         className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center" />
         <div className="px-0 md:px-10">
-          <h4 className="text-4xl font-light">{title}</h4>
-          <p className="font-bold text-2xl mt-1">{companyName}</p>
+          <h4 className="text-md md:text-2xl xl:text-4xl font-light">{title}</h4>
+          <p className="font-bold text-sm md:text-lg xl:text-2xl mt-1">{companyName}</p>
           {tech}
           <div className="flex space-x-2 my-2">
           </div>
-          <p className="uppercase py-5 text-gray-300">{dateStarted} - {dateEnded}</p>
+          <p className="uppercase py-5 text-sm md:text-lg xl:text-2xl text-gray-300">{dateStarted} - {dateEnded}</p>
           <ul className="list-disc space-y-4 ml-5 text-sm md:text-lg xl:text-2xl">
             {points.map((point, i) => {
               return (

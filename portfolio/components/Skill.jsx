@@ -19,7 +19,7 @@ export default function Skill({ skill }) {
           x:0
         }}
       >
-        <Image src={urlFor(skill.image).url()} width={50} height={50}
+        <Image src={urlFor(skill.image).url()} alt='' width={50} height={50}
         className="rounded-full border border-gray-500 object-cover w-24 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"/>
       </motion.div>
       <div className="absolute rounded-full opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-24 w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 z-0">

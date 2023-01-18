@@ -34,7 +34,7 @@ export default function Projects({ projects }) {
                 }}
                 viewport={{ once: true }}
               >
-                <Image src={project.image} width={1000} height={1000} />
+                <Image src={project.image} alt='' width={1000} height={1000} />
               </motion.div>
             <div>
               <h4 className="text-2xl">Project {i+1}: {project.title}</h4>
