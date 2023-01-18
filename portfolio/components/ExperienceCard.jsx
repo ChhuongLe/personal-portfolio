@@ -1,4 +1,4 @@
-import React from 'react';
+import {React} from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { IconContext } from 'react-icons';
@@ -17,7 +17,7 @@ export default function ExperienceCard({title, companyName, image, dateStarted, 
     })
   }
   return (
-    <article className=" hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200">
+    <div className=" hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200">
       <motion.div
         initial={{
           y:-100,
@@ -42,15 +42,15 @@ export default function ExperienceCard({title, companyName, image, dateStarted, 
           <div className="flex space-x-2 my-2">
           </div>
           <p className="uppercase py-5 text-gray-300">{dateStarted} - {dateEnded}</p>
-          <ul className="list-disc space-y-4 ml-5 text-lg">
-            {points.map((point) => {
+          <ul className="list-disc space-y-4 ml-5 text-sm md:text-lg xl:text-2xl">
+            {points.map((point, i) => {
               return (
-                <li>{point}</li>
+                <li key={i}>{point}</li>
               )
             })}
           </ul>
         </div>
       </motion.div>
-    </article>
+    </div>
   )
 }

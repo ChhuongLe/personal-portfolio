@@ -22,22 +22,21 @@ export default function About () {
         }}
         viewport={{once: true}}
         transition={{duration: 1.2}}
-        className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+        className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 py-10 justify-evenly mx-auto items-center"
       >
         <Image
           src="https://lh3.googleusercontent.com/oysLeSyXo3URGfIuht9ZZCA9O8a7F9KbRMUUqH8WHm9AfFmd2-uSW2mr2DB4KP4adXri_0d2km0saICBtyD-Cole01IE5M2zbMZoEbltlj9hajDR4bJGahdtRIcZaMRUJa3XmfocHek=w2400"
           width={500}
           height={500}
-          className="mb-20 md:mb-0 w-56 h-56 rounded-full relative mx-auto object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
+          className="mt-20 mb-5 md:mb-0 md:mt-0 w-56 h-56 rounded-full relative mx-auto object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
         />
-        <div className="space-y-10 px-0 md:px-10">
-          <h4 className="text-4xl font-semibold">My background</h4>
-          <p className="text-lg">
-            My name is Chhuong (pronounced "CHONG"). I am a gradudate from the University of California, Riverside (B.S. in Chemical and Environmental Engineering) and former Applications Engineer that came from an industry leading automation comapany. I have transitioned my carrer path towards software development and could not be happier with my choice. I have several years of experience as an application developer with my previous company and have made my own full stack applications to grow with the always expanding industry. In my hours away from the computer, I am an avid landscape photographer, a cat father to a beautiful ragdoll named Loki, and a keyboard building enthusiast.
+        <div className="space-y-1 px-0 md:px-10">
+          <h4 className="text-lg md:text-2xl xl:text-4xl font-semibold">My background</h4>
+          <p className="text-sm md:text-lg xl:text-2xl">
+           Hello! The name's <span className="underline decoration-[#A27B5C]">Chhuong </span>(pronounced "CHONG"). I was a former Applications Engineer for an industry leading automation company where I self taught myself how to code in C++,Python, and PLC ladder logic. I am degreed in Chemical and Environmental Engineering from UC Riverside and a graduate from the rigorous and immersive coding bootcamp Hack Reactor. In my off time, I am a huge keyboard enthusiast constantly looking to improve my set up and cat dad to a beautiful ragdoll named Loki.
           </p>
         </div>
       </motion.div>
-
     </div>
   )
 }
