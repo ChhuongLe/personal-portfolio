@@ -20,9 +20,8 @@ export default function Projects({ projects }) {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Projects</h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400 scrollbar-thumb-[#DCD7C9]" >
         {projects.map((project, i)=>{
-          console.log(project.technologies);
           return (
-            <div key={i} className="w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44">
+            <div key={i} className= "w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44">
               <motion.div
                 initial={{
                   y:-300,
@@ -35,11 +34,11 @@ export default function Projects({ projects }) {
                 }}
                 viewport={{ once: true }}
               >
-                <Image src={project.image} width={700} height={700}  />
+                <Image src={project.image} width={1000} height={1000} />
               </motion.div>
             <div>
               <h4 className="text-2xl">Project {i+1}: {project.title}</h4>
-              <p>{project.summary}</p>
+              <p className="text-sm md:text-lg xl:text-2xl">{project.summary}</p>
             </div>
           </div>
           )
