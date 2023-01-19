@@ -41,7 +41,7 @@ export default function Projects({ projects }) {
               <div className="flex flex-row">
                 {project.technologies.map((tech)=>{
                   return (
-                    <Image src={urlFor(tech.image).url()} alt='' width={50} height={50} className="w-5 h-5 md:w-7 md:h-7 xl:w-10 xl:h-10 mr-3 my-2"/>
+                    <Image key={tech._id} src={urlFor(tech.image).url()} alt='' width={50} height={50} className="w-5 h-5 md:w-7 md:h-7 xl:w-10 xl:h-10 mr-3 my-2"/>
                   )
                 })}
               </div>

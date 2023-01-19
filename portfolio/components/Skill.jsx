@@ -22,9 +22,9 @@ export default function Skill({ skill }) {
         <Image src={urlFor(skill.image).url()} alt='' width={50} height={50}
         className="rounded-full border border-gray-500 object-cover w-10 h-10 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"/>
       </motion.div>
-      <div className="absolute rounded-full opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-24 w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 z-0">
+      <div className="absolute rounded-full opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white w-10 h-10 md:w-28 md:h-28 xl:w-32 xl:h-32 z-0">
         <div className="flex items-center justify-center h-full">
-          <p className="text-3xl font-bold text-black opacity-100">{progress}%</p>
+          <p className="text-sm md:text-lg xl:text-2xl font-bold text-black opacity-100">{progress}%</p>
         </div>
       </div>
 
