@@ -11,7 +11,7 @@ export default function ExperienceCard({title, companyName, image, dateStarted, 
   if(technologies !== null || technologies !== undefined){
     tech = technologies.map((el, i)=>{
       return (
-        <div key={i} className="py-2 px-2"><Image src={urlFor(el.image).url()} alt='' width={30} height={30}/></div>
+        <Image src={urlFor(el.image).url()} alt='' width={30} height={30} className="mr-2 w-5 h-5 md:w-8 md:h-8 xl:w-12 xl:h-12"/>
       )
 
     })
@@ -39,10 +39,12 @@ export default function ExperienceCard({title, companyName, image, dateStarted, 
         <div className="px-0 md:px-10">
           <h4 className="text-md md:text-2xl xl:text-4xl font-light">{title}</h4>
           <p className="font-bold text-sm md:text-lg xl:text-2xl mt-1">{companyName}</p>
-          {tech}
+          <div className="flex flex-row">
+            {tech}
+          </div>
           <div className="flex space-x-2 my-2">
           </div>
-          <p className="uppercase py-5 text-sm md:text-lg xl:text-2xl text-gray-300">{dateStarted} - {dateEnded}</p>
+          <p className="uppercase text-sm md:text-lg xl:text-2xl text-gray-300">{dateStarted} - {dateEnded}</p>
           <ul className="list-disc space-y-4 ml-5 text-sm md:text-lg xl:text-2xl">
             {points.map((point, i) => {
               return (
