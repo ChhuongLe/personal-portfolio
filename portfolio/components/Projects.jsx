@@ -37,7 +37,14 @@ export default function Projects({ projects }) {
                 <Image src={project.image} alt='' width={1000} height={1000} />
               </motion.div>
             <div>
-              <h4 className="text-2xl">Project {i+1}: {project.title}</h4>
+              <h4 className="text-lg md:text-2xl xl:text-4xl font-bold">Project {i+1}: {project.title}</h4>
+              <div className="flex flex-row">
+                {project.technologies.map((tech)=>{
+                  return (
+                    <Image src={urlFor(tech.image).url()} alt='' width={50} height={50} className="w-5 h-5 md:w-7 md:h-7 xl:w-10 xl:h-10 mr-3 my-2"/>
+                  )
+                })}
+              </div>
               <p className="text-sm md:text-lg xl:text-2xl">{project.summary}</p>
             </div>
           </div>
