@@ -29,7 +29,7 @@ export default function ExperienceCard({title, companyName, image, dateStarted, 
           y: 0
         }}
         viewport={{once: true}}
-        className="mt-20 flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[300px] h-[520px] md:w-[500px] xl:w-[600px] snap-center bg-[#292929] p-10 overflow-scroll"
+        className="mt-20 flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[300px] h-[520px] md:w-[500px] md:h-[600px] xl:w-[600px] xl:h-auto xl:overflow-hidden snap-center bg-[#292929] p-10 overflow-scroll"
       >
         <Image src={image}
         alt=''
