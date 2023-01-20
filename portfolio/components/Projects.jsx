@@ -1,5 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MediumClone from '../public/Medium.png';
 import { urlFor } from '../sanity';
@@ -34,10 +34,13 @@ export default function Projects({ projects }) {
                 }}
                 viewport={{ once: true }}
               >
-                <Image src={project.image} alt='' width={1000} height={1000} />
+              <Image src={project.image} alt='' width={1000} height={1000} />
               </motion.div>
             <div>
-              <h4 className="text-lg md:text-2xl xl:text-4xl font-bold">Project {i+1}: {project.title}</h4>
+              <Link href={project.link} className="cursor-pointer hover:underline">
+                <h4 className="text-lg md:text-2xl xl:text-4xl font-bold">Project {i+1}: {project.title}</h4>
+              </Link>
+
               <div className="flex flex-row">
                 {project.technologies.map((tech)=>{
                   return (
