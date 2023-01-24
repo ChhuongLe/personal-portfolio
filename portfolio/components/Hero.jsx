@@ -23,8 +23,8 @@ export default function Hero() {
         height={500}
         className="relative rounded-full h-32 w-32 mx-auto object-cover"/>
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[10px]">Software Engineer</h2>
-        <h1 className="text-2xl lg:text-6xl font-semibold px-10">
+        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[8px] sm:tracking-[15px]">Software Engineer</h2>
+        <h1 className="text-md sm:text-2xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor = "#A27B5C" />
         </h1>

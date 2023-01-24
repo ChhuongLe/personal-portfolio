@@ -1,9 +1,25 @@
-import React from 'react';
-import Link from 'next/link';
-import { SocialIcon } from 'react-social-icons';
+import { React, useState } from 'react'
+import Link from 'next/link'
+import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion'
+import { AiOutlineMenu } from 'react-icons/ai'
 
 export default function Header () {
+  const [isClick, setClick] = useState(false);
+
+  let dropDownMenu;
+
+  const handleClick = () => {
+    setClick(!isClick)
+  }
+  if(isClick === true) {
+    dropDownMenu = (
+      <div className="absolute">
+        THIS IS THE DROPDOWN I GUESS
+      </div>
+    )
+  }
+
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
       <motion.div
@@ -51,7 +67,8 @@ export default function Header () {
         transition={{
           duration: 0.5
         }}
-        className="flex flex-row items-center text-gray-300 cursor-pointer">
+        className="flex flex-row items-center text-gray-300 cursor-pointer space-x-2 mr-2">
+        {dropDownMenu}
         <SocialIcon
           className="cursor-pointer"
           network="email"
@@ -62,6 +79,7 @@ export default function Header () {
         <Link href="#contact">
           <p className="uppercase hidden md:inline-flex text-sm text-grey-400">Get in touch</p>
         </Link>
+        <AiOutlineMenu size={20} style={{opacity:"0.5"}} className="sm:hidden" onClick={handleClick}/>
       </motion.div>
     </header>
   )

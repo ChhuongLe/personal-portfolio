@@ -4,7 +4,7 @@
 
 @layer components {
   .heroButton {
-    @apply px-5 py-5 border border-[#2C3639] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#A27B5C]/40 hover:text-[#F7AB0A]/40
+    @apply hidden sm:inline-flex mt-5 sm:mt-0 px-5 py-5 border border-[#2C3639] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#A27B5C]/40 hover:text-[#F7AB0A]/40
   }
 
   .contactInput {

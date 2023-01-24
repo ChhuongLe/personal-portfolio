@@ -34,7 +34,7 @@ export default function About () {
         <div className="space-y-1 px-0 md:px-10">
           <h4 className="text-lg md:text-2xl xl:text-4xl font-semibold">My background</h4>
           <p className="text-sm md:text-lg xl:text-2xl">
-           Hello! The name is <span className="underline decoration-[#A27B5C]">Chhuong </span>(pronounced &quot;CHONG&quot;). I was a former Applications Engineer for an industry leading automation company where I self taught myself how to code in C++,Python, and PLC ladder logic. I am degreed in Chemical and Environmental Engineering from UC Riverside and a graduate from the rigorous and immersive coding bootcamp Hack Reactor. In my off time, I am a huge keyboard enthusiast constantly looking to improve my set up and cat dad to a beautiful ragdoll named Loki.
+           Hello! The name is <span className="underline decoration-[#A27B5C]">Chhuong </span>(pronounced &quot;CHONG&quot;). I was a former Applications Engineer for an industry leading automation company where I self taught myself how to code in C++, Python, and PLC ladder logic. I am degreed in Chemical and Environmental Engineering from UC Riverside and a graduate from the rigorous and immersive coding bootcamp Hack Reactor. In my off time, I am a huge keyboard enthusiast constantly looking to improve my set up and cat dad to a beautiful ragdoll named Loki.
           </p>
         </div>
       </motion.div>

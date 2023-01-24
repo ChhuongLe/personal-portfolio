@@ -3,7 +3,13 @@ import { sanityClient } from "../../sanity";
 
 const query = groq `
   *[_type == "experience"] {
-    ...,
+    _id,
+    companyName,
+    dateStarted,
+    dateEnded,
+    isCurrentlyWorkingHere,
+    companyImage,
+    points,
     technologies[]->
   }
 `
