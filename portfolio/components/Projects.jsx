@@ -18,13 +18,13 @@ export default function Projects({ projects }) {
       }}
       className="flex relative h-screen overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Projects</h3>
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400 scrollbar-thumb-[#DCD7C9]" >
+      <div className="relative mt-16 sm:mt-0 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400 scrollbar-thumb-[#DCD7C9]" >
         {projects.map((project, i)=>{
           return (
             <div key={i} className= "w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44">
               <motion.div
                 initial={{
-                  y:-300,
+                  y:-200,
                   opacity: 0
                 }}
                 transition={{ duration: 1.2 }}
@@ -44,7 +44,7 @@ export default function Projects({ projects }) {
               <div className="flex flex-row">
                 {project.technologies.map((tech)=>{
                   return (
-                    <Image key={tech._id} src={urlFor(tech.image).url()} alt='' width={50} height={50} className="w-5 h-5 md:w-7 md:h-7 xl:w-10 xl:h-10 mr-3 my-2"/>
+                    <Image key={tech._id} src={urlFor(tech.image).url()} alt='' width={50} height={50} className="rounded-full border border-gray-500 w-6 h-6 md:w-7 md:h-7 xl:w-10 xl:h-10 mr-1 my-2"/>
                   )
                 })}
               </div>

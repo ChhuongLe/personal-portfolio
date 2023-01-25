@@ -30,7 +30,7 @@ export default function ContactMe() {
             <p className="text-sm md:text-2xl xl:text-2xl">https://github.com/chhuongle</p>
           </div>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-cover mx-auto">
           <div className="flex space-x-2">
             <input {...register('Name')} placeholder="Name" className="contactInput" type="text"/>
             <input {...register('Email')} placeholder="Email" className="contactInput" type="email"/>
