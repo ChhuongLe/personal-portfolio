@@ -30,7 +30,7 @@ export default function Header () {
             <div className="absolute flex flex-col space-y-5 top-[50px] left-[25px]">
               <Link href="#hero" className="navElement">Main Page</Link>
               <Link href="#about" className="navElement">About</Link>
-              <Link href="#experiece" className="navElement">Experience</Link>
+              <Link href="#experience" className="navElement">Experience</Link>
               <Link href="#skills" className="navElement">Skills</Link>
               <Link href="#projects" className="navElement" >Projects</Link>
             </div>
