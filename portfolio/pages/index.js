@@ -20,7 +20,7 @@ import {
 export default function Home({experience, projects, skills, socials}) {
   return (
     <div
-      className="bg-[#2C3639] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#DCD7C9]/80"
+      className="bg-[#2C3639] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#DCD7C9]/80"
     >
       <Head>
         <title>Chhuong - Portfolio</title>

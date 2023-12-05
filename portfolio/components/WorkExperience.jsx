@@ -5,6 +5,7 @@ import { sanityClient } from "../sanity";
 
 export default function WorkExperience({ experience }){
   let data = experience;
+  console.log(data.length);
   return (
     <motion.div
     initial={{opacity: 0}}
