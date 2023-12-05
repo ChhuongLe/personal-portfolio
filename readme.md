@@ -25,7 +25,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Portfolio](https://i.imgur.com/FRdLRMI.jpg) (https://chhuong-portfolio.vercel.app/)
+![Portfolio](https://i.imgur.com/suCQp9w.png) (https://chhuong-portfolio.vercel.app/)
 
 I leveraged the NextJS framework to build out a fullstack portfolio. In this build I utilized Sanity to house my backend (project experience, professional experience, skill sets, and other items about me) and React for the front-end.
 
