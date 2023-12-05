@@ -36,7 +36,7 @@ I leveraged the NextJS framework to build out a fullstack portfolio. In this bui
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![Tailwind][Tailwind]][Tailwind-url]
-* [[!Sanity][Sanity]][Sanity-url]
+* [![Sanity][Sanity]][Sanity-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
