@@ -35,7 +35,7 @@ I leveraged the NextJS framework to build out a fullstack portfolio. In this bui
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
-* [![TailwindCSS][TailwindCSS]][Tailwind-url]
+* [![Tailwind][Tailwind]][Tailwind-url]
 * [[!Sanity][Sanity]][Sanity-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -101,5 +101,7 @@ Useful resources that were used in this build
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[Tailwind]: https://img.shields.io/badge/tailwind-blue?style=for-the-badge&logo=tailwindcss&logoColor=white
+[Tailwind-url]: https://tailwindcss.com/
 [Sanity]: https://img.shields.io/badge/sanity-red?style=for-the-badge&logo=sanity&logoColor=white
 [Sanity-url]: https://www.sanity.io/
