@@ -53,7 +53,6 @@ Requires npm
   npm install npm@latest -g
 
 Requires sanity
-  ```
 * sanity
   ```sh
   npm create sanity@latest
