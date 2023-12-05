@@ -10,7 +10,7 @@ import WorkExperience from '../components/WorkExperience.jsx';
 import Skills from '../components/Skills.jsx';
 import Projects from '../components/Projects.jsx';
 import ContactMe from '../components/ContactMe.jsx';
-import {ChevronDoubleUpIcon} from '@heroicons/react/24/solid';
+import { ChevronDoubleUpIcon } from '@heroicons/react/24/solid';
 import {
   fetchExperience,
   fetchProjects,

@@ -1,11 +1,30 @@
+'use client'
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MediumClone from '../public/Medium.png';
 import { urlFor } from '../sanity';
-import { ChevronRightIcon } from '@heroicons/react/24/solid';
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid';
+import { useState } from 'react'
 
 export default function Projects({ projects }) {
+  const [currSlide, setCurrSlide] = useState(0);
+
+  // move the slide back
+  const prevSlide = () => {
+    if(currSlide === 0) setCurrSlide(projects.length-1);
+    else setCurrSlide(currSlide-1);
+  }
+
+  // move the slide forward
+  const nextSlide = () => {
+    if(currSlide === projects.length-1) setCurrSlide(0);
+    else setCurrSlide(currSlide+1);
+
+    console.log(currSlide);
+  }
+
   return (
     <motion.div
       initial={{
@@ -22,7 +41,15 @@ export default function Projects({ projects }) {
       <div className="relative mt-16 sm:mt-0 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400 scrollbar-thumb-[#DCD7C9]" >
         {projects.map((project, i)=>{
           return (
-            <div key={i} className= "w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44">
+            <div
+              key={i}
+              className= "w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:p-44"
+              style={{
+                transform: `translateX(-${currSlide*100}%)`
+              }}
+            >
+              <ArrowLeftCircleIcon className="absolute top-[50vh] left-[10vw] xl:top-[40vh] xl:left-[10vw] hidden md:block h-10 w-10 xl:h-20 xl:w-20 opacity-50 hover:opacity-100 hover:cursor-pointer transition ease-in-out" onClick={prevSlide} />
+              <ArrowRightCircleIcon className="absolute top-[50vh] right-[10vw] xl:top-[40vh] xl:right-[10vw] hidden md:block h-10 w-10 xl:h-20 xl:w-20 opacity-50 hover:opacity-100 transition ease-in-out hover:cursor-pointer" onClick={nextSlide} />
               <motion.div
                 initial={{
                   y:-200,
@@ -38,7 +65,7 @@ export default function Projects({ projects }) {
               <Image src={project.image} alt='' width={1000} height={1000} />
               </motion.div>
             <div>
-              <Link href={project.link} className="cursor-pointer hover:underline">
+              <Link href={project.link} className="cursor-pointer hover:underline w-9">
                 <h4 className="text-lg md:text-2xl xl:text-4xl font-bold">Project {i+1}: {project.title}</h4>
               </Link>
 
