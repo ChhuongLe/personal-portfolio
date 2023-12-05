@@ -51,6 +51,8 @@ Requires npm
 * npm
   ```sh
   npm install npm@latest -g
+
+Requires sanity
   ```
 * sanity
   ```sh
