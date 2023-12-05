@@ -5,17 +5,17 @@ import { IconContext } from 'react-icons';
 import { SiCplusplus } from 'react-icons/si'
 import { urlFor } from '../sanity';
 
-export default function ExperienceCard({title, companyName, image, dateStarted, dateEnded, isCurrentlyWorkingHere, points, technologies}) {
+export default function ExperienceCard({ title, companyName, image, dateStarted, dateEnded, isCurrentlyWorkingHere, points, technologies }) {
   let tech;
 
-  if(technologies !== null && technologies !== undefined){
-    tech = technologies.map((el)=>{
+  if(technologies !== null && technologies !== undefined) {
+    tech = technologies.map((el) => {
       return (
         <Image key={el._id} src={urlFor(el.image).url()} alt='' width={30} height={30} className="mr-2 w-5 h-5 md:w-8 md:h-8 xl:w-12 xl:h-12"/>
       )
-
     })
   }
+
   return (
     <div className=" hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200">
       <motion.div
